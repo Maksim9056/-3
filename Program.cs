@@ -19,8 +19,9 @@ namespace КТ_3
                 for (int i = 0;i< 10; i++)
                 {
                     Faker faker = new Faker("ru");
-                  
-                    User user = new User(faker.Name.FullName(), Convert.ToInt32(faker.Random.Int(1,100).ToString()));
+
+          
+                         User user = new User(faker.Name.FirstName(), Convert.ToInt32(faker.Random.Int(1,100).ToString()));
 
                     global.CreateUser(user); 
                 }
