@@ -1,6 +1,7 @@
 ﻿
 
 using Bogus;
+using Bogus.DataSets;
 
 namespace КТ_3
 {
@@ -18,12 +19,12 @@ namespace КТ_3
                 for (int i = 0;i< 10; i++)
                 {
                     Faker faker = new Faker("ru");
-
-                    User user = new User(faker.Name.Random.String2(20,"abcdefghijklmnopqrstuvwxyz").ToString(), Convert.ToInt32(faker.Random.Int(1,100).ToString()));
+                  
+                    User user = new User(faker.Name.FullName(), Convert.ToInt32(faker.Random.Int(1,100).ToString()));
 
                     global.CreateUser(user); 
                 }
-
+                
                 global.Select();
 
                 Console.ReadLine();

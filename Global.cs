@@ -19,9 +19,7 @@ namespace КТ_3
             public DbSet<User> Users { get; set; } = null!;
             public ApplicationContext()
             {
-                // Database.EnsureDeleted(); // гарантируем, что бд удалена
-                Database.EnsureCreated(); // гарантируем, что бд будет созд
-
+                Database.EnsureCreated(); // гарантируем, что бд будет создание
             }
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
