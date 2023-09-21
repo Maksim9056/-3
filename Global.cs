@@ -118,12 +118,27 @@ namespace КТ_3
 
     }
 
+        /// <summary>
+        /// Класс пользователей
+        /// </summary>
         public class User
         {
-            public int Id { get; set; }
-            public string Name { get; set; }
+              /// <summary>
+             /// Id пользователя
+             /// </summary>
+             public int Id { get; set; }
+
+            /// <summary>
+            /// Имя пользователя
+           /// </summary>
+           public string Name { get; set; }
+             /// <summary>
+            /// Имя пользователя
+            /// </summary>
             public int Age { get; set; }
             public User() { }
+             
+             
             public User(int id, string name, int age)
             {
                 Id = id;
